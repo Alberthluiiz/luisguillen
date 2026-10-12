@@ -1,0 +1,21 @@
+:root {
+    --bs-body-font-family: 'Poppins', sans-serif;
+}
+
+.section-portada {
+    background:
+        linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.6)
+        ),
+        url('../assets/img/fondo-portada.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-portada .img-perfil {
+    width: 100%;
+    max-width: 480px;
+}
