@@ -1,21 +1,72 @@
+/* =========================================================
+   ÍNDICE
+   1. Variables
+   2. Base
+   3. Componentes reutilizables
+   4. Secciones
+      4.1 Header
+   5. Modo claro
+   ========================================================= */
+
+/* ========== 1. VARIABLES: cámbialas solo aquí ========== */
 :root {
-    --bs-body-font-family: 'Poppins', sans-serif;
+  /* Tipografía */
+  --fuente-principal: "Poppins", sans-serif;
+
+  /* Paleta */
+  --negro: #0b0b0f;
+  --naranja: #ff7a1a;
+  --gris-claro: #e6e8ec;
+  --azul-oscuro: #16294d;
+  --azul-marino: #0b1a33;
 }
 
-.section-portada {
-    background:
-        linear-gradient(
-            to bottom right,
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.6)
-        ),
-        url('../assets/img/fondo-portada.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+/* ========== 2. BASE: etiquetas que afectan a toda la página ========== */
+
+/* box-sizing: el padding y el borde se cuentan DENTRO del ancho.
+   normalize.css no lo trae, así que lo ponemos nosotros. */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-.section-portada .img-perfil {
-    width: 100%;
-    max-width: 480px;
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--azul-marino);
+  color: var(--gris-claro);
 }
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit; /* los botones no heredan la fuente por defecto */
+  color: inherit;
+}
+
+/* ========== 3. COMPONENTES REUTILIZABLES ========== */
+/* TODO: .boton y .boton--naranja */
+/* TODO: .boton-tema */
+
+/* ========== 4.1 HEADER ========== */
+.header__logo {
+  height: 40px; /* fijamos el alto; el ancho se ajusta solo */
+  width: auto;
+}
+
+/* TODO: .header__nav → logo, menú y acciones en una fila,
+         separados a los extremos (pista: display: flex + justify-content) */
+/* TODO: .header__menu → quitar los puntos de la lista y ponerla en fila
+         (pista: list-style, display: flex, gap, margin/padding) */
+/* TODO: .header__link → color y efecto al pasar el mouse (:hover) */
+
+/* ========== 5. MODO CLARO ========== */
+/* Lo haremos en la etapa de JavaScript */
